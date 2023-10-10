@@ -24,7 +24,7 @@ pipeline{
 
     stage('Sonarqube Analysis'){
       steps{
-        withSonarQubeEnv(installationName: 'sonar-server', credentialsId: 'Sonar-token'){
+        withSonarQubeEnv('sonar-server'){
           sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=Game \
                     -Dsonar.projectKey=Game '''
         }
