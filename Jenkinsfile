@@ -37,11 +37,11 @@ pipeline{
       }
     }
 
-    stage('Install Dependencies'){
-      steps{
-        sh "npm install"
-      }
-    }
+    // stage('Install Dependencies'){
+    //   steps{
+    //     sh "npm install"
+    //   }
+    // }
 
     stage('TRIVY FS SCAN'){
       steps{
